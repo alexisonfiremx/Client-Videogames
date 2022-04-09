@@ -11,7 +11,7 @@ export const GET_GAME_DETAIL = 'GET_GAME_DETAIL';
 export const POST_GAME = 'POST_GAME';
 export const CLEAR_STATE_DETAIL = 'CLEAR_STATE_DETAIL';
 export const CLEAR_STATE_VIDEOGAMES = 'CLEAR_STATE_VIDEOGAMES';
-// const URL1 = 'http://localhost:3001' 
+// const URL1 = 'http://localhost:3001'  
 const URL2 = 'https://vg-back-mh.herokuapp.com' 
 
 export function getAllGames() {
