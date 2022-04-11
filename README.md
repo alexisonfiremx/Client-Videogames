@@ -105,31 +105,31 @@ The database model was created with the following entities
 
 
 
-#### Backend
+### Backend
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
-
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
+A server was developed in Node/Express with the following routes:
 
 - [ ] __GET /videogames__:
-  - Obtener un listado de los videojuegos
-  - Debe devolver solo los datos necesarios para la ruta principal
+  - Get a list of video games
+  - Returns only the data needed to be rendered on the home page.
 - [ ] __GET /videogames?name="..."__:
-  - Obtener un listado de las primeros 15 videojuegos que contengan la palabra ingresada como query parameter
-  - Si no existe ningún videojuego mostrar un mensaje adecuado
+  - Obtains a list of the first 15 video games that matches the words entered as a query parameter
+  - If there is no video game match, an error message is returned.
 - [ ] __GET /videogame/{idVideogame}__:
-  - Obtener el detalle de un videojuego en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de videojuego
-  - Incluir los géneros asociados
+  - Gets the detailed data of a particular video game
+  - Brings only the data required in the video game detail route
 - [ ] __GET /genres__:
-  - Obtener todos los tipos de géneros de videojuegos posibles
-  - En una primera instancia deberán traerlos desde rawg y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
+  - Gets all types of video game genres
+  - At first, it brings all the genres from rawg API and saves them in the database, and then uses the data from there
+- [ ] __GET /platforms__:
+  - Gets all types of video game platforms
+  - At first, it brings all the platforms from rawg API and saves them in the database, and then uses the data from there
 - [ ] __POST /videogame__:
-  - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de videojuego por body
-  - Crea un videojuego en la base de datos
+  - Receives the data through req.body collected from the controlled form of the video game creation route
+  - Creates a video games and saves it on the database
 
 
-#### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+### Testing
+- [ ] 8 unit tests were created for the database models with "Chai"
+- [ ] 15 unit tests were created for routes with "Chai"
+- [ ] 5 unit test were created for the Landing Page component with "enzyme"
